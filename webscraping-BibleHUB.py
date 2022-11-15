@@ -8,11 +8,11 @@ from urllib.request import urlopen, Request
 random_chapter = random.randint(1,21)
 
 if random_chapter < 10:
-    random_chapter = '0' + str(random_chapter)
+    random_chapter = str(random_chapter)
 else:
     random_chapter = str(random_chapter)
 
-webpage = 'https://ebible.org/asv/JHN' + random_chapter + '.htm'
+webpage = 'https://biblehub.com/asv/john/1.htm' + random_chapter + '.htm'
 print(webpage)
 
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.3'}
@@ -47,8 +47,5 @@ TwilioNumber = '+17432026208'
 myCellPhone = '+18304817381'
 
 textmessage = client.messages.create(to=myCellPhone,from_=TwilioNumber, body=myverse)
-
-
-
 
 
